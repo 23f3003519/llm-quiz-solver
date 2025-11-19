@@ -1,20 +1,20 @@
 import requests
 import json
 
-# Test data - UPDATE THESE VALUES!
+# Test data - UPDATED FOR LIVE DEPLOYMENT
 test_data = {
-    "email": "your_email@example.com",
+    "email": "test@example.com",
     "secret": "mysecret2024",  # Must match your .env SECRET_STRING
     "url": "https://tds-llm-analysis.s-anand.net/demo"
 }
 
 def test_api():
     try:
-        print("Testing API endpoint...")
+        print("Testing LIVE API endpoint...")
         
-        # Test local server
+        # Test LIVE Vercel server (not localhost)
         response = requests.post(
-            "http://localhost:8000/solve",
+            "https://llm-quiz-solver-pttyi00ac-23f3003519s-projects.vercel.app/solve",  # ← UPDATED URL
             json=test_data,
             timeout=180
         )
